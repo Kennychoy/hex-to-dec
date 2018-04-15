@@ -1,0 +1,349 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'PT Sans Narrow', sans-serif;
+	letter-spacing: .3rem;
+}
+
+@media screen and (min-width: 400px){
+	body {
+		background: url(hextodecbg.jpg) no-repeat center center;
+		background-size: cover;
+		position: relative;
+		width: 100vw;
+		height: 100vh;
+	}
+	#wrapper {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: rgba(255, 255, 255, .3);
+	}
+	#board {
+		position: absolute;
+		width: 400px;
+		height: 75%;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		background: rgba(13, 13, 38, .7);
+		box-shadow: 6px 6px black;
+	}
+	#title {
+		font-size: 4rem;
+		color: #f0f0f5;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		border: 3px outset #ececf9;
+		height: 15%;
+		display: flex;
+	}
+	#title center {
+		margin: auto;
+	}
+	#timer, #messageDiv {
+		text-align: center;
+		background: rgba(0, 0, 0, .2);
+		color: #ff0000;
+		height: 15%;
+		display: flex;
+	}	
+	#timer div {
+		flex: 1;
+		margin: auto;
+	}
+	.timer-timing {
+		font-size: 3rem;
+	}
+	#messageDiv {
+		display: flex;
+		height: 10%;
+		font-size: 3rem;
+	}
+	#message {
+		margin: auto;
+	}
+	#qanda {
+		display: flex;
+		text-align: center;
+		color: white;
+		height: 15%;
+	}
+	#qanda-q, #qanda-a {
+		flex: 1;
+		margin: auto;
+	}
+	.unit {
+		padding-right: 15px;
+		font-size: 2rem;
+	}
+	.hexanddec {
+		font-size: 6rem;
+	}
+	#hex, #dec {
+	    color: #9933ff;
+		text-shadow: 3px 3px black;
+	}
+	.btns-rows {
+		height: 8%;
+		display: flex;
+		justify-content: space-around;
+	}
+	.btns-rows:last-of-type {
+		padding-top: 10px;
+	}
+	.num-btn, #back {
+		width: 50px;
+		height: 50px;		
+	}
+	.btn {
+		background: rgba(0, 0, 0, .3);
+		box-shadow: 2px 2px black;
+		border-radius: 50%;
+		color: white;
+		border: 0px solid white;
+		transition: border .2s, color .2s;
+	}
+	.btn:hover {
+		border: 1.5px solid red;
+		color: red;
+	}
+	.btn:focus {			
+		outline: none !important;
+		color: white;
+	}
+	.btn:active {
+		transform: scale(1.2);
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 399px){
+	body {
+		background: url(hextodecbg.jpg) no-repeat center center;
+		background-size: cover;
+		position: relative;
+		width: 100vw;
+		height: 100vh;
+	}
+	#wrapper {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: rgba(255, 255, 255, .3);
+	}
+	#board {
+		position: absolute;
+		width: 90%;
+		height: 90%;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		background: rgba(13, 13, 38, .7);
+		box-shadow: 6px 6px black;
+	}
+	#title {
+		font-size: 3rem;
+		color: #f0f0f5;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		border: 3px outset #ececf9;
+		height: 15%;
+		display: flex;
+	}
+	#title center {
+		margin: auto;
+	}
+	#timer, #messageDiv {
+		text-align: center;
+		background: rgba(0, 0, 0, .2);
+		color: #ff0000;
+		height: 15%;
+		display: flex;
+	}	
+	#timer div {
+		flex: 1;
+		margin: auto;
+	}
+	.timer-timing {
+		font-size: 3rem;
+	}
+	#messageDiv {
+		display: flex;
+		height: 10%;
+		font-size: 2rem;
+	}
+	#message {
+		margin: auto;
+	}
+	#qanda {
+		display: flex;
+		text-align: center;
+		color: white;
+		height: 15%;
+	}
+	#qanda-q, #qanda-a {
+		flex: 1;
+		margin: auto;
+	}
+	.unit {
+		padding-right: 15px;
+		font-size: 2rem;
+	}
+	.hexanddec {
+		font-size: 4.5rem;
+	}
+	#hex, #dec {
+	    color: #9933ff;
+		text-shadow: 3px 3px black;
+	}
+	.btns-rows {
+		height: 8%;
+		display: flex;
+		justify-content: space-around;
+	}
+	.btns-rows:last-of-type {
+		padding-top: 10px;
+	}
+	.num-btn, #back {
+		width: 30px;
+		height: 30px;		
+	}
+	.btn {
+		background: rgba(0, 0, 0, .3);
+		box-shadow: 2px 2px black;
+		border-radius: 50%;
+		color: white;
+		border: 0px solid white;
+		transition: border .2s, color .2s;
+	}
+	.btn:hover {
+		border: 1.5px solid red;
+		color: red;
+	}
+	.btn:focus {			
+		outline: none !important;
+		color: white;
+	}
+	.btn:active {
+		transform: scale(1.2);
+	}
+	#start, #submit, #playagain {
+		font-size: 1.3rem;
+	}
+}
+
+@media screen and (max-width: 319px){
+	body {
+		background: url(hextodecbg.jpg) no-repeat center center;
+		background-size: cover;
+		position: relative;
+		width: 100vw;
+		height: 100vh;
+	}
+	#wrapper {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: rgba(255, 255, 255, .3);
+	}
+	#board {
+		position: absolute;
+		width: 90%;
+		height: 90%;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		background: rgba(13, 13, 38, .7);
+		box-shadow: 6px 6px black;
+	}
+	#title {
+		font-size: 3rem;
+		color: #f0f0f5;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		border: 3px outset #ececf9;
+		height: 15%;
+		display: flex;
+	}
+	#title center {
+		margin: auto;
+	}
+	#timer, #messageDiv {
+		text-align: center;
+		background: rgba(0, 0, 0, .2);
+		color: #ff0000;
+		height: 15%;
+		display: flex;
+	}	
+	#timer div {
+		flex: 1;
+		margin: auto;
+	}
+	.timer-timing {
+		font-size: 3rem;
+	}
+	#messageDiv {
+		display: flex;
+		height: 10%;
+		font-size: 2.5rem;
+	}
+	#message {
+		margin: auto;
+	}
+	#qanda {
+		display: flex;
+		text-align: center;
+		color: white;
+		height: 15%;
+	}
+	#qanda-q, #qanda-a {
+		flex: 1;
+		margin: auto;
+	}
+	.unit {
+		padding-right: 15px;
+		font-size: 2rem;
+	}
+	.hexanddec {
+		font-size: 4.5rem;
+	}
+	#hex, #dec {
+	    color: #9933ff;
+		text-shadow: 3px 3px black;
+	}
+	.btns-rows {
+		height: 8%;
+		display: flex;
+		justify-content: space-around;
+	}
+	.btns-rows:last-of-type {
+		padding-top: 10px;
+	}
+	.num-btn, #back {
+		width: 30px;
+		height: 30px;		
+	}
+	.btn {
+		background: rgba(0, 0, 0, .3);
+		box-shadow: 2px 2px black;
+		border-radius: 50%;
+		color: white;
+		border: 0px solid white;
+		transition: border .2s, color .2s;
+	}
+	.btn:hover {
+		border: 1.5px solid red;
+		color: red;
+	}
+	.btn:focus {			
+		outline: none !important;
+		color: white;
+	}
+	.btn:active {
+		transform: scale(1.2);
+	}
+	#start, #submit, #playagain {
+		font-size: 1rem;
+	}
+}
